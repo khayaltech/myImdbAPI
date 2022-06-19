@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 import os
+import sys
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -29,6 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# TESTING=len(sys.argv)>1 and sys.argv[1]=='test'
+
 
 ALLOWED_HOSTS = []
 
